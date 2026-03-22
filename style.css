@@ -10,12 +10,39 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
+    position: static;
 }
 
-header {
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #011f3d;
+    color: white;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.site-header {
+    position: relative;
     background-color: #023b74;
     color: white;
-    padding: 40px; 
+    padding: 60px 20px; 
     text-align: center; 
     margin-bottom: 20px; 
 }
@@ -23,8 +50,6 @@ header {
 h1 {
     font-size: 3rem;
     font-weight: 700;
-    font-stretch: condensed;
-    font-style: normal;
     font-variant: small-caps;
     text-transform: capitalize;
 }
@@ -39,29 +64,56 @@ h1 {
     margin: 0 auto; 
 }
 
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .game-card {
+    position: relative;
     background: white;
     border: 2px solid #ddd; 
     margin-bottom: 30px; 
     display: flex; 
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 
-#featured-item {
-    border-color: #f1c40f;
+.row-reverse {
+    flex-direction: row-reverse;
 }
 
 .game-img {
     width: 300px; 
     height: 200px; 
     object-fit: cover;
+    flex-shrink: 1;
 }
 
 .game-content {
     padding: 20px; 
     flex: 1; 
     color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fixed-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
 
 h2 {
@@ -81,18 +133,29 @@ h2[title="survival-game"] {
 
 p {
     font-size: initial;
-    font-weight: normal;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #023b74;
     color: white;
     margin-top: 40px;
+    position: relative;
 }
 
 .site-footer p {
     font-size: inherit;
-    font-style: italic;
+}
+
+#featured-item::after {
+    content: "NUEVO";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f1c40f;
+    color: #000;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
 }

@@ -6,32 +6,47 @@
     <title>Mi super sitio web</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="main-site">
+<body id="main-layout">
 
-    <header class="header-main">
-        <h1 id="site-title">Mis juegos favoritos</h1>
+    <nav class="navbar-sticky">
+        <div class="nav-container">
+            <span class="logo">GamingBlog</span>
+            <ul class="nav-links">
+                <li>Inicio</li>
+                <li>Juegos</li>
+                <li>Contacto</li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="site-header">
+        <h1 id="main-title">Mis juegos favoritos</h1>
         <p>Un espacio para mis títulos preferidos</p>
     </header>
 
     <main class="container">
-        <article class="game-card" id="first-game">
-            <img src="img/DS.webp" alt="Portada de Juego 1" class="game-img">
-            <div class="game-content">
-                <h2 title="survival">Don't Starve</h2>
-                <p>WIP</p>
-            </div>
-        </article>
+        <section class="flex-wrapper">
+            <article class="game-card" id="featured-item">
+                <img src="img/DS.webp" alt="Don't Starve" class="game-img">
+                <div class="game-content">
+                    <h2 title="survival-game">Don't Starve</h2>
+                    <p>WIP</p>
+                </div>
+            </article>
 
-        <article class="game-card">
-            <img src="img/Terra.png" alt="Portada de Juego 2" class="game-img">
-            <div class="game-content">
-                <h2>Terraria</h2>
-                <p>WIP</p>
-            </div>
-        </article>
+            <article class="game-card row-reverse">
+                <img src="img/Terra.png" alt="Terraria" class="game-img">
+                <div class="game-content">
+                    <h2>Terraria</h2>
+                    <p>WIP</p>
+                </div>
+            </article>
+        </section>
     </main>
 
-    <footer>
+    <div class="fixed-badge">TOP 2026</div>
+
+    <footer class="site-footer">
         <p>&copy; 2026 jezusdayz </p>
     </footer>
 
