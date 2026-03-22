@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi super sitio web</title>
+    <title>Gaming Blog | Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="main-layout">
@@ -12,9 +12,9 @@
         <div class="nav-container">
             <span class="logo">GamingBlog</span>
             <ul class="nav-links">
-                <li>Inicio</li>
-                <li>Juegos</li>
-                <li>Contacto</li>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
             </ul>
         </div>
     </nav>
@@ -28,19 +28,18 @@
         <section class="flex-wrapper space-evenly">
             <article class="game-card special-item">
                 <img src="img/DS.webp" alt="Don't Starve" class="game-img">
-                <div class="game-content space-between-content">
+                <div class="game-content center-content">
                     <h2 title="survival-game">Don't Starve</h2>
                     <p>WIP</p>
-                    <span> SUpervivencia </span>
                 </div>
             </article>
 
-            <article class="game-card align-end">
+            <article class="game-card">
                 <img src="img/Terra.png" alt="Terraria" class="game-img">
                 <div class="game-content space-between-content">
                     <h2>Terraria</h2>
                     <p>WIP</p>
-                    <span>Exploración</span>
+                    <span class="badge">Exploración</span>
                 </div>
             </article>
 
@@ -53,10 +52,15 @@
         </section>
     </main>
 
-    <div class="fixed-badge">TOP 2026</div>
-
     <footer class="site-footer">
-        <p>&copy; 2026 jezusdayz </p>
+        <div class="footer-content">
+            <p>&copy; 2026 jezusdayz</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+            </ul>
+        </div>
     </footer>
 
 </body>
