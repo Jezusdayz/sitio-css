@@ -80,7 +80,14 @@ body {
     flex-direction: column;
     width: 100%;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO SOLICITADO */
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 .game-img {
@@ -94,15 +101,6 @@ body {
     flex: 1; 
     display: flex;
     flex-direction: column;
-}
-
-.badge {
-    align-self: flex-start;
-    background: #3498db;
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 4px;
 }
 
 footer {
@@ -130,60 +128,25 @@ footer {
     text-decoration: none;
 }
 
-/* para telefonos */
 @media (max-width: 480px) {
-    #main-title {
-        font-size: 1.8rem;
-    }
-
-    .nav-links {
-        gap: 10px;
-        font-size: 0.75rem;
-    }
-
-    .game-card {
-        max-width: 100%;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        text-align: center;
-    }
+    #main-title { font-size: 1.8rem; }
+    .nav-links { gap: 10px; font-size: 0.75rem; }
+    .game-card { max-width: 100%; }
+    .footer-links { flex-direction: column; text-align: center; }
 }
 
-/* Bpara tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
-    .nav-container {
-        width: 95%;
-    }
-
-    .game-card {
-        width: 45%;
-    }
-
-    #main-title {
-        font-size: 2.5rem;
-    }
+    .nav-container { width: 95%; }
+    .game-card { width: 45%; }
+    #main-title { font-size: 2.5rem; }
 }
 
-/* standar xd*/
 @media (min-width: 1025px) {
-    .game-card {
-        width: 30%;
-    }
+    .game-card { width: 30%; }
 }
 
-/* pantallas grandes*/
 @media (min-width: 1600px) {
-    .container {
-        max-width: 1600px;
-    }
-
-    .game-card {
-        width: 22%;
-    }
-
-    body {
-        font-size: 18px;
-    }
+    .container { max-width: 1600px; }
+    .game-card { width: 22%; }
+    body { font-size: 18px; }
 }
